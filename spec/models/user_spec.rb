@@ -10,14 +10,15 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:email) }
     it { should validate_uniqueness_of(:email) }
+    it { should validate_presence_of(:password_digest) }
   end
 
   describe 'instance methods' do
     before :each do
-      @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-      @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-      @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-      @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
+      @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+      @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+      @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+      @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
 
       @party1 = Party.create!(date: (Date.new + rand(90).days), start_time: "#{rand(1..24)}:00", movie_title: "Up", duration: (240 + rand(30)))
       @party2 = Party.create!(date: (Date.new + rand(90).days), start_time: "#{rand(1..24)}:00", movie_title: "Alien", duration: (240 + rand(30)))
@@ -55,6 +56,15 @@ RSpec.describe User, type: :model do
       it 'retrieves all users except for itself' do
         expect(@user1.other_users).to eq([@user2, @user3, @user4])
       end
+    end
+  end
+  describe 'authentication' do
+    it { should have_secure_password }
+    it 'hashes the password' do
+      john = User.create(name: 'John Doe', email: 'johnd@test.com', password: 'password321', password_confirmation: 'password321')
+      expect(john).to_not have_attribute(:password)
+      expect(john.password_digest).to_not eq('password321')
+      expect(john.password_digest).to_not be_empty
     end
   end
 end

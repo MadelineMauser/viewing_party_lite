@@ -3,7 +3,7 @@ require 'faker'
 
 RSpec.describe 'Discover Movies Page' do
   before(:each) do
-    @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
+    @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'test', password_confirmation: 'test')
 
     visit "/users/#{@user.id}/discover"
   end
