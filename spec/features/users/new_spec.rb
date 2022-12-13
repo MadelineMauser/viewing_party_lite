@@ -21,7 +21,7 @@ RSpec.describe 'New User Registration' do
         fill_in 'Password', with: 'password'
         fill_in 'Confirm Password', with: 'password'
         click_button 'Register'
-
+        
         new_user = User.find_by(name: 'John Doe')
         expect(page).to have_current_path(user_path(new_user))
         expect(new_user.email).to eq(@email)

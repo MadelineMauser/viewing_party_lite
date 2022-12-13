@@ -18,6 +18,22 @@
             <%= f.text_field :email %><br>
           </td>
         </tr>
+             <tr>
+          <th>
+            <%= f.label :password, 'Password' %>
+          </th>
+          <td>
+            <%= f.text_field :password %><br>
+          </td>
+        </tr>
+             <tr>
+          <th>
+            <%= f.label :password_confirmation, 'Confirm Password' %>
+          </th>
+          <td>
+            <%= f.text_field :password_confirmation %><br>
+          </td>
+        </tr>
       </table>
       <%= f.submit 'Register' %>
     <% end %>
