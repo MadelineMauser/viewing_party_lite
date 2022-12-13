@@ -4,6 +4,7 @@ RSpec.describe 'New User Registration' do
   before(:each) do
     visit '/register'
     @email = Faker::Internet.email
+    @email2 = Faker::Internet.email
   end
   describe 'registration form' do
     it 'has fields for a name and email and a button to register' do
@@ -43,13 +44,36 @@ RSpec.describe 'New User Registration' do
       it 'does not create a new user if the password is not identical to the confirm password' do
         User.create!(name: 'John Doe', email: @email, password: 'test', password_confirmation: 'test')
         fill_in 'Name', with: 'Imposter John'
-        fill_in 'Email', with: @email
+        fill_in 'Email', with: @email2
         fill_in 'Password', with: 'password'
         fill_in 'Confirm Password', with: 'password123'
         click_button 'Register'
 
         expect(page).to have_current_path('/register')
-        expect(User.exists?(name: 'Imposter John', email: @email)).to eq(false)
+        expect(User.exists?(name: 'Imposter John', email: @email2)).to eq(false)
+        expect(page).to have_content("Error: ")
+      end
+      it 'does not create a new user if the password is missing' do
+        User.create!(name: 'John Doe', email: @email, password: 'test', password_confirmation: 'test')
+        fill_in 'Name', with: 'Imposter John'
+        fill_in 'Email', with: @email2
+        fill_in 'Confirm Password', with: 'password123'
+        click_button 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(User.exists?(name: 'Imposter John', email: @email2)).to eq(false)
+        expect(page).to have_content("Error: ")
+      end
+      it 'does not create a new user if the password confirmation is missing' do
+        User.create!(name: 'John Doe', email: @email, password: 'test', password_confirmation: 'test')
+        fill_in 'Name', with: 'Imposter John'
+        fill_in 'Email', with: @email2
+        fill_in 'Password', with: 'password'
+        click_button 'Register'
+
+        expect(page).to have_current_path('/register')
+        expect(User.exists?(name: 'Imposter John', email: @email2)).to eq(false)
+        expect(page).to have_content("Error: ")
       end
     end
   end
