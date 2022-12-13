@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'New Viewing Party' do
   before(:each) do
-    @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
+    @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
 
     visit new_user_movie_party_path(@user1, 862)
   end

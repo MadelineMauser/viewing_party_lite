@@ -3,10 +3,10 @@ require 'faker'
 
 RSpec.describe 'Users' do
   before(:each) do
-    @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
-    @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email)
+    @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
+    @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
 
     @party1 = Party.create!(date: (Date.new + rand(90).days), start_time: "#{rand(1..24)}:00", movie_title: "Up", duration: (240 + rand(30)))
     @party2 = Party.create!(date: (Date.new + rand(90).days), start_time: "#{rand(1..24)}:00", movie_title: "Alien", duration: (240 + rand(30)))

@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 2022_12_12_204429) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password"
-    t.string "password_confirmation"
     t.string "password_digest"
   end
 
