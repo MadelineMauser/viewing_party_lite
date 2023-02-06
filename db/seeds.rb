@@ -8,5 +8,5 @@
 User.destroy_all
 
 5.times do
-  User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.free_email)
+  User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.free_email, password: "password", password_confirmation: "password")
 end

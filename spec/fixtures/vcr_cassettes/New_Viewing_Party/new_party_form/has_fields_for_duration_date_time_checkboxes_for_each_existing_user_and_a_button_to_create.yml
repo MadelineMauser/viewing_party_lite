@@ -187,4 +187,102 @@ http_interactions:
       string: !binary |-
         eyJpZCI6ODYyLCJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhdXRob3IiOiJHaW1seSIsImF1dGhvcl9kZXRhaWxzIjp7Im5hbWUiOiJHaW1seSIsInVzZXJuYW1lIjoiUnV1eiIsImF2YXRhcl9wYXRoIjoiL3hVT2JuSlN2SHJGUHNJcG9EbWIxamlRWkxxNy5qcGciLCJyYXRpbmciOjguMH0sImNvbnRlbnQiOiJUaGlzIG1vdmllIGNhbWUgb3V0IHdoZW4gSSB3YXMgdGhyZWUuIE5vdyBJJ20gdHdlbnR5IHNldmVuIGFuZCB0aGUgZ29kZGFtbiB0aGluZyBzdGlsbCBob2xkcyB1cC5cclxuXHJcbl9GaW5hbCByYXRpbmc64piF4piF4piF4piFIC0gVmVyeSBzdHJvbmcgYXBwZWFsLiBBIHBlcnNvbmFsIGZhdm91cml0ZS5fIiwiY3JlYXRlZF9hdCI6IjIwMTktMDctMTZUMTQ6NDg6NDIuOTAzWiIsImlkIjoiNWQyZGUzY2E2YTMwMGIwMDBmYTQ3NTg5IiwidXBkYXRlZF9hdCI6IjIwMjEtMDYtMjNUMTU6NTg6MjQuMzE0WiIsInVybCI6Imh0dHBzOi8vd3d3LnRoZW1vdmllZGIub3JnL3Jldmlldy81ZDJkZTNjYTZhMzAwYjAwMGZhNDc1ODkifSx7ImF1dGhvciI6IkpQVjg1MiIsImF1dGhvcl9kZXRhaWxzIjp7Im5hbWUiOiIiLCJ1c2VybmFtZSI6IkpQVjg1MiIsImF2YXRhcl9wYXRoIjoiL3hOTE9xWFhWSmY5bTdXbmdVTUxJTUZzaktnaC5qcGciLCJyYXRpbmciOjkuMH0sImNvbnRlbnQiOiJEZWNpZGVkIHRvIHJldmlzaXQgdGhpcyBhZnRlciBtYW55IHllYXJzIGFuZCBzdGlsbCBob2xkcyB1cCBzbyB3ZWxsLiBHcmVhdCBtb3ZpZSBmb3IgYm90aCBraWRzIGFuZCBhZHVsdHMgd2l0aCB3b25kZXJmdWwgdGVhY2hhYmxlIG1vbWVudHMuIEp1c3QgYSBncm91bmRicmVha2luZyBhbmltYXRlZCBtb3ZpZSBhbGwgYXJvdW5kLiAqKjQuNS81KioiLCJjcmVhdGVkX2F0IjoiMjAxOS0xMC0xNFQxOTozMjowOS42MDJaIiwiaWQiOiI1ZGE0Y2QzOThhODhiMjAwMTNjNjU0YjciLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNi0yM1QxNTo1ODoyNy45NjlaIiwidXJsIjoiaHR0cHM6Ly93d3cudGhlbW92aWVkYi5vcmcvcmV2aWV3LzVkYTRjZDM5OGE4OGIyMDAxM2M2NTRiNyJ9LHsiYXV0aG9yIjoicjk2c2siLCJhdXRob3JfZGV0YWlscyI6eyJuYW1lIjoiIiwidXNlcm5hbWUiOiJyOTZzayIsImF2YXRhcl9wYXRoIjoiL2h0dHBzOi8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvOTZjMmUwZTRhYzk4NDUwZjllOGUzYzBhMGE0MGFhZDguanBnIiwicmF0aW5nIjoxMC4wfSwiY29udGVudCI6IkEgc3R1bm5pbmcgZmVhdHVyZSBmaWxtIGVudHJhbmNlIGZyb20gUGl4YXIhIDxlbT4nVG95IFN0b3J5JzwvZW0+IGlzIGEgdHJ1ZSBkZWxpZ2h0LCBmcm9tIHRoZSBmaXJzdCBzZWNvbmQgdG8gdGhlIGxhc3QuXHJcblxyXG5UaGUgQ0dJIGFuaW1hdGlvbiBpcyBleGNlbGxlbnQuIEFsbCB0aGUgdG95cyBsb29rIGJyaWxsaWFudCwgYXMgZG9lcyB0aGUgd29ybGQgaXRzZWxmIC0gSSBsb3ZlIHRoZSBmZWVsIG9mIGl0LiBUaGUgbXVzaWMgaXMgdmVyeSBnb29kLCBSYW5keSBOZXdtYW4gZG9lcyBhIG5pY2Ugam9iIC0gXCJZb3UndmUgR290IGEgRnJpZW5kIGluIE1lXCIgaXMgYSBjcmFja2VyLlxyXG5cclxuVG9tIEhhbmtzIGxlYWRzIGEgc3Ryb25nIGNhc3QuIEhhbmtzIHBsYXlzIFdvb2R5LCB0byBmYW50YXN0aWMgZWZmZWN0LiBIZSBpcyB0aGUgYmVzdCBwYXJ0IG9mIHRoaXMgZmlsbS4gVGltIEFsbGVuIGlzIGdyZWF0LCB0b28sIGFzIEJ1enogTGlnaHR5ZWFyLiBEb24gUmlja2xlcyAoTXIuIFBvdGF0byBIZWFkKSwgV2FsbGFjZSBTaGF3biAoUmV4KSBhbmQgSm9obiBSYXR6ZW5iZXJnZXIgKEhhbW0pIGFsc28gYnJpbmcgZnVuLlxyXG5cclxuRXZlcnl0aGluZyBlbHNlIGlzIGp1c3QgYXMgdGVycmlmaWM6IHRoZSBodW1vdXIsIHRoZSBwYWNpbmcsIHRoZSBwbG90IC0gSSBlbmpveSBpdCBhbGwuIFRoZXJlIGFyZSBwcm9iYWJseSBzb21lIGZsYXdzIGluIHBhcnRzLCBuYW1lbHkgQnV6eidzIHN1cHBvc2VkIHVuYXdhcmVuZXNzLCBidXQgbm90aGluZyBpbXBhY3RzIHRoZSB2aWV3aW5nIGV4cGVyaWVuY2UuIEdvIHdhdGNoISIsImNyZWF0ZWRfYXQiOiIyMDIwLTA2LTI4VDEyOjA4OjU4LjQ1M1oiLCJpZCI6IjVlZjg4ODVhZDZkNjRkMDAzN2M1MjgzMiIsInVwZGF0ZWRfYXQiOiIyMDIxLTA2LTIzVDE1OjU4OjM5Ljg4M1oiLCJ1cmwiOiJodHRwczovL3d3dy50aGVtb3ZpZWRiLm9yZy9yZXZpZXcvNWVmODg4NWFkNmQ2NGQwMDM3YzUyODMyIn0seyJhdXRob3IiOiJDaW5lbWFTZXJmIiwiYXV0aG9yX2RldGFpbHMiOnsibmFtZSI6IkNpbmVtYVNlcmYiLCJ1c2VybmFtZSI6Ikdlcm9uaW1vMTk2NyIsImF2YXRhcl9wYXRoIjoiLzFra3MzWW5Wa3B5UXh6dzM2Q09iRlB2aEw1Zi5qcGciLCJyYXRpbmciOjcuMH0sImNvbnRlbnQiOiJFdmVyeSBub3cgYW5kIGFnYWluIHdoZW4geW91IHdhdGNoIGFudGlxdWVzIHByb2dyYW1tZXMgb24gdGVsZXZpc2lvbiBhbmQgc29tZWJvZHkgdHVybnMgdXAgd2l0aCBhIHRveSBpbiBpdCdzIG9yaWdpbmFsIGJveCAtIHRoYXQgdHVybnMgb3V0IHRvIGJlIHdvcnRoIG1vcmUgdGhhbiBoaXMgY2FyIC0gSSByZWdyZXQgdGhhdCBJIG5vIGxvbmdlciBwb3NzZXNzIGFueSBmcm9tIG15IGNoaWxkaG9vZC4gSSBkbyByZWNhbGwsIGhvd2V2ZXIsIGJlaW5nIGVzcGVjaWFsbHkgZmlja2xlIC0gdGhlIGZhdm91cml0ZSBvbmUgZGF5IHdhcyBuZXZlciBsaWtlbHkgdG8gcmVpZ24gbG9uZyBiZWZvcmUgYmVpbmcgc3VwcGxhbnRlZCBieSBhbm90aGVyLiBUaGF0J3MgdGhlIGNhc2UgaGVyZSBmb3IgY293Ym95IFwiV29vZHlcIi4gSGUgaXMgdGhlIGZhdm91cml0ZSBvZiBvd25lciBcIkFuZHlcIiBhbW9uZ3N0LCBpdCBoYXMgdG8gYmUgc2FpZCwgcmF0aGVyIGEgbG90IG9mIGRpZmZlcmVudCBvbmVzLiBVbnRpbCwgdGhhdCBpcyAtIG9uZSBiaXJ0aGRheSwgd2UgbWVldCBTcGFjZSBSYW5nZXIgXCJCdXp6IExpZ2h0eWVhclwiLiBIZSdzIGFjdHVhbGx5IHF1aXRlIGFuIGFmZmFibGUgY2hhcCwgYnV0IHRoZSBncmVlbiBleWVkIG1vbnN0ZXIgaXMgbm93IGluIGNoYXJnZSBhbmQgXCJXb29keVwiIHRyaWVzIHRvIHJlbGVnYXRlIGhpcyBzdWNjZXNzb3IgZG93biB0aGUgc2lkZSBvZiB0aGUgYmVkLiBUaGF0IGdvZXMgd3JvbmcgYW5kLCBhY2NpZGVudGFsbHksIG91dCBvZiB0aGUgd2luZG93IGhlIGdvZXMuIFRoZSBvdGhlciB0b3lzIGFyZSBob3JyaWZpZWQsIGxlYXZpbmcgXCJXb29keVwiIHdpdGggbm8gb3B0aW9uIGJ1dCB0byBnZXQgb3ZlciBoaXMgbGFzZXIgZW52eSwgcmVzY3VlIGhpcyBuZXcgcml2YWwgYW5kIHJlcGF0cmlhdGUgaGltIGJlZm9yZSB0aGUgd2hvbGUgZmFtaWx5IG1vdmUgdG8gYSBuZXcgaG9tZSEgV2hhdCBub3cgZW5zdWVzIGFyZSBzb21lIGZ1biBlc2NhcGFkZXMsIG5lYXIgbWlzc2VzIGFuZCB0aGV5IGZhbGwgaW50byB0aGUgaGFuZHMgb2YgYW5vdGhlciB5b3VuZyBib3kgd2hvIHJlYWxseSBkb2VzIHdhbnQgdG8gYmxhc3QgXCJCdXp6XCIgaW50byBzcGFjZS4gVGhlIHZvY2FsIHRhbGVudHMgb2YgVG9tIEhhbmtzIGFuZCBUaW0gQWxsZW4gYXJlIGVudGh1c2lhc3RpYyBhbmQgZW50ZXJ0YWluaW5nLCB0aG9zZSBvZiBEb24gUmlja2xlcyAoXCJNci4gUG90YXRvIEhlYWRcIikgc29tZXRpbWVzIGEgbGl0dGxlIG5lYXJlciB0aGUgYm9uZSBmb3IgdGhlIGdyb3duIHVwcyBhbmQgdGhleSBhcmUgYWxsIGhlbHBlZCBhbG9uZyBieSBhIGdvb2Qgc291bmR0cmFjayBhbmQgYSB3aXR0aWx5IHdyaXR0ZW4gc2NyaXB0IG9mZmVyaW5nIHVzIHBsZW50eSBvZiBzY2VuYXJpb3MgdGhhdCBkcmF3IHRoZSB2aWV3ZXIgKG9mIHdoYXRldmVyIGFnZSkgaW50byB0aGlzIHNpbXBsZSwgcHJldHR5IHRpbWVsZXNzIHN0b3J5LiBJdCdzIGludGVyZXN0aW5nLCBmb3IgMTk5NSwgdG8gbm90ZSB0aGUgd2lkZSB2YXJpZXR5IG9mIHRveXMgdGhpcyB5b3VuZyBib3kgaGFzLCB0b28gLSBubyBnZW5kZXIgc3RlcmVvdHlwaW5nLCB3aGljaCBpcyBxdWl0ZSByZWZyZXNoaW5nLiBUaGlzIGlzIHF1aWNrbHkgcGFjZWQgYW5kIGVuam95YWJsZSBhbmltYXRpb24gdGhhdCB0b3VjaGVzIG9uIHRoZSB2YWx1ZXMgb2YgdHJ1c3QsIGNvbXBhbmlvbnNoaXAgYW5kIHRlYW0gc3BpcnQgLSBhcyB3ZWxsIGFzIHRoZSBkZW1lcml0cyBvZiBlbnZ5IGFuZCBzZWxmaXNobmVzcyAtIGFuZCBJIHJlYWxseSBlbmpveWVkIGl0LiIsImNyZWF0ZWRfYXQiOiIyMDIyLTA2LTE1VDE0OjI0OjEwLjIwM1oiLCJpZCI6IjYyYTllYjhhMjJhZjNlNTIxNDFlYjEyZCIsInVwZGF0ZWRfYXQiOiIyMDIyLTA2LTE1VDE0OjI0OjEwLjIwM1oiLCJ1cmwiOiJodHRwczovL3d3dy50aGVtb3ZpZWRiLm9yZy9yZXZpZXcvNjJhOWViOGEyMmFmM2U1MjE0MWViMTJkIn1dLCJ0b3RhbF9wYWdlcyI6MSwidG90YWxfcmVzdWx0cyI6NH0=
   recorded_at: Fri, 02 Dec 2022 20:53:39 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/862?api_key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 06 Feb 2023 18:27:07 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 4d0ecb5905192435c3fd204705c9fc24.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - gXoJpY9FiA4UGkTDakYq8Z5v_Fb_PnO5VkIr_ylk0mE459hjiiBB7g==
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Mon, 06 Feb 2023 18:27:07 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie//credits?api_key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 06 Feb 2023 18:27:07 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=300
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 e4ca364cc5959e3bf697ae231c5b56b0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - nT42eWt8kCeKMGiMWORKGJLJvetXiOg4fnFQzCizLD2dKu78hTQ4Fg==
+      Vary:
+      - Origin
+    body:
+      encoding: UTF-8
+      string: '{"status_code":7,"status_message":"Invalid API key: You must be granted
+        a valid key.","success":false}
+
+'
+  recorded_at: Mon, 06 Feb 2023 18:27:07 GMT
 recorded_with: VCR 6.1.0
