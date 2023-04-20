@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   end
 
   get '/users/:user_id', to: 'users#show'
-
+  get '/login', to: 'users#login_form'
 
 end
