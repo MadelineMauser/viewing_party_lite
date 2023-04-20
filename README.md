@@ -1,8 +1,10 @@
 # Viewing Party
 
-This is the base repo for the [Viewing Party Lite project](https://backend.turing.edu/module3/projects/viewing_party_lite) used for Turing's Backend Module 3.
+This repo was forked from the [Viewing Party Lite project](https://backend.turing.edu/module3/projects/viewing_party_lite) used for Turing's Backend Module 3.
 
 ### About this Project
+
+This project is currently being expanded upon as a personal exercise. Please excuse the mess!
 
 Viewing Party Lite is an application in which users can explore movie options and create a viewing party event for themselves and other users of the application.
 
@@ -19,4 +21,11 @@ Viewing Party Lite is an application in which users can explore movie options an
 
 - Rails 5.2.6
 
-Example wireframes to follow are found [here](https://backend.turing.edu/module3/projects/viewing_party_lite/wireframes)
+The example wireframes that were loosely followed are found [here](https://backend.turing.edu/module3/projects/viewing_party_lite/wireframes)
+
+## To-do
+
+- Implement a functional user login (In Progress)
+- Update the site layout and visuals
+- Potentially add JavaScript functionality
+- Improve overall usability of the application
