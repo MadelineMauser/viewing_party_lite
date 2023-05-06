@@ -30,7 +30,8 @@ RSpec.describe 'Users' do
     @party_user11 = PartyUser.create!(user_id: @user4.id, party_id: @party5.id, host: true)
     @party_user12 = PartyUser.create!(user_id: @user3.id, party_id: @party5.id, host: false)
 
-    visit "/users/#{@user1.id}"
+    session[:user_id] = @user1.id
+    visit " /dashboard"
   end
   describe 'show' do
     it 'has user name dashboard at the top', :vcr do
@@ -43,7 +44,7 @@ RSpec.describe 'Users' do
 
     it 'links to the discover page for the user', :vcr do
       click_link('Discover Movies')
-      expect(current_path).to eq("/users/#{@user1.id}/discover")
+      expect(current_path).to eq("/dashboard/discover")
     end
 
     it 'has section to display parties', :vcr do
@@ -100,7 +101,7 @@ RSpec.describe 'Users' do
       end
       it 'redirects to the movie show page when the movie title is clicked', :vcr do
         click_link 'Up'
-        expect(page).to have_current_path("/users/#{@user1.id}/movies/14160")
+        expect(page).to have_current_path("/dashboard/movies/14160")
       end
       it 'has the image of each movie', :vcr do
         expect(page).to have_css('img[src*="vpbaStTMt8qqXaEgnOR2EE4DNJk.jpg"]')

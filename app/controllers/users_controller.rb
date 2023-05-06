@@ -3,12 +3,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
-    @user = User.find(params[:id])
-    @parties_invited_to = @user.parties_invited_to
-    @parties_hosting = @user.parties_hosting
-  end
-
   def new; end
 
   def create
@@ -25,7 +19,20 @@ class UsersController < ApplicationController
   end
 
   def login
+    user = User.find_by(email: params[:email])
+    if user.authenticate(params[:password])
+      session[user_id] = user.id
+      redirect_to '/dashboard'
+    else
+      flash[:alert] = "Login failed. Please check that your credentials are correct."
+      redirect_to :back
+    end
+  end
 
+  def dashboard
+    @user = @current_user
+    @parties_invited_to = @user.parties_invited_to
+    @parties_hosting = @user.parties_hosting
   end
 
   private

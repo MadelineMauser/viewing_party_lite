@@ -3,7 +3,7 @@
   <b>Existing Users</b>
     <ul>
       <% @users.each do |user| %>
-        <li><%= link_to user.name, user_path(user.id) %></li>
+        <li><%= user.name %></li>
       <% end %>
     </ul>
   </div>
