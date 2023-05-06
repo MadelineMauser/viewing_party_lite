@@ -1,5 +1,9 @@
 <div>
 <% form_with url: '/login', method: post, local: true do |f| %>
-  <% f.label :email, "Email" %>
-  <% f.text_field :email %>
+  <%= f.label :email, "Email" %>
+  <%= f.text_field :email %>
+  <%= f.label :password, "Password" %>
+  <%= f.text_field :password %>
+  <%= f.submit "Log In"%>
+<% end %>
 </div>
