@@ -14,6 +14,7 @@ RSpec.describe 'Login' do
     end
     it 'has a form to submit login information', :vcr do
       visit "/login"
+      
       expect(page).to have_field("Email")
       expect(page).to have_field("Password")
       expect(page).to have_button("Log In")

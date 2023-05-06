@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
 
   has_secure_password
+  
   def parties_invited_to
     parties.where('party_users.host = ?', false)
   end
