@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
     if params[:search] == ""
-      redirect_to user_discover_index_path
+      redirect_to '/discover'
     elsif params.include? 'search'
       @search_results = MovieSearch.new.search_movies(params[:search])
     else

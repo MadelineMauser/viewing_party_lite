@@ -19,7 +19,7 @@ class PartiesController < ApplicationController
       end
       redirect_to controller: :users, action: :show
     else
-      redirect_to new_user_movie_party_path(@party_host, @movie.id)
+      redirect_to :back
     end
   end
 
