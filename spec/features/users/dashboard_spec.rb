@@ -29,9 +29,10 @@ RSpec.describe 'Users' do
 
     @party_user11 = PartyUser.create!(user_id: @user4.id, party_id: @party5.id, host: true)
     @party_user12 = PartyUser.create!(user_id: @user3.id, party_id: @party5.id, host: false)
+   
+    @current_user = @user1
 
-    session[:user_id] = @user1.id
-    visit " /dashboard"
+    visit "/dashboard"
   end
   describe 'show' do
     it 'has user name dashboard at the top', :vcr do
@@ -44,7 +45,7 @@ RSpec.describe 'Users' do
 
     it 'links to the discover page for the user', :vcr do
       click_link('Discover Movies')
-      expect(current_path).to eq("/dashboard/discover")
+      expect(current_path).to eq("/discover")
     end
 
     it 'has section to display parties', :vcr do

@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   def create
     @new_user = User.new(user_params)
     if @new_user.save
-      redirect_to user_path(@new_user)
+      session[:user_id] = @new_user.id
+      redirect_to '/dashboard'
     else
       flash[:alert] = "Error: #{@new_user.errors.full_messages}"
       redirect_to '/register'
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   def login
     user = User.find_by(email: params[:email])
     if user.authenticate(params[:password])
-      session[user_id] = user.id
+      session[:user_id] = user.id
       redirect_to '/dashboard'
     else
       flash[:alert] = "Login failed. Please check that your credentials are correct."
