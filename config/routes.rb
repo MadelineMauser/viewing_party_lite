@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   get '/users/:user_id', to: 'users#show'
   get '/login', to: 'users#login_form'
+  post '/login', to: 'users#login'
 
 end
