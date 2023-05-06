@@ -7,22 +7,16 @@ RSpec.describe 'Movies Index Page' do
   end
 
   describe 'index' do
-    it 'has movie names that are links to show page', :vcr do
-      visit "/users/#{@user.id}/discover"
+    it 'has movie names that are links to movie show page', :vcr do
+      visit "/movies"
       expect(page).to have_link('Discover Top Rated Movies')
-      # json_response = File.read('spec/fixtures/top_rated_movies.json')
-      # stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=#{ENV.fetch('tmdb_api_key', nil)}").to_return(
-      #   status: 200, body: json_response
-      # )
+
       click_link('Discover Top Rated Movies')
-      expect(current_path).to eq("/users/#{@user.id}/movies")
+      expect(current_path).to eq("/movies")
       expect(page).to have_link('The Godfather')
-      # json_response = File.read('spec/fixtures/godfather_movie.json')
-      # stub_request(:get, "https://api.themoviedb.org/3/movie/238?api_key=#{ENV.fetch('tmdb_api_key', nil)}&language=en-US").to_return(
-      #   status: 200, body: json_response
-      # )
+
       click_link 'The Godfather'
-      expect(current_path).to eq(user_movie_path(@user.id, 238))
+      expect(current_path).to eq(movie_path(238))
     end
   end
 end

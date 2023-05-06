@@ -4,15 +4,15 @@ require 'faker'
 RSpec.describe 'Discover Movies Page' do
   before(:each) do
     @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'test', password_confirmation: 'test')
-
-    visit "/users/#{@user.id}/discover"
+    @current_user = @user
+    visit "/discover"
   end
 
   describe 'index' do
     it 'has a link to discover top rated movies that links to movies results page', :vcr do
       expect(page).to have_link('Discover Top Rated Movies')
       click_link('Discover Top Rated Movies')
-      expect(current_path).to eq("/users/#{@user.id}/movies")
+      expect(current_path).to eq("/movies")
       expect(page.status_code).to eq(200)
       expect(page).to have_content("The Godfather")
       expect(page).to have_content("Vote average: ")
@@ -31,7 +31,7 @@ RSpec.describe 'Discover Movies Page' do
       fill_in "search",	with: ""
       click_button 'Find Movies'
 
-      expect(current_path).to eq("/users/#{@user.id}/discover")
+      expect(current_path).to eq("/discover")
     end
   end
 end

@@ -7,7 +7,8 @@ RSpec.describe 'New Viewing Party' do
     @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
     @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
 
-    visit new_user_movie_party_path(@user1, 862)
+    @current_user = @user1
+    visit '/movies/862/parties/new'
   end
   describe 'new party form' do
     it 'has fields for duration, date, time, checkboxes for each existing user, and a button to create', :vcr do
@@ -29,7 +30,7 @@ RSpec.describe 'New Viewing Party' do
         check "users_#{@user3.id}"
         click_button 'Create'
 
-        expect(page).to have_current_path(user_path(@user1))
+        expect(page).to have_current_path(/dashboard)
         within '#hosting' do
           expect(page).to have_content('Toy Story')
           expect(page).to have_content(@user2.name)

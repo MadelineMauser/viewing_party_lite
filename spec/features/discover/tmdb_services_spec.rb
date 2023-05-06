@@ -22,7 +22,7 @@ RSpec.describe 'TMDB Search' do
     end
 
     it 'can grab a specific movie', :vcr do
-      visit "/users/#{@user.id}/movies"
+      visit "/movies"
       click_link 'The Godfather'
       expect(page).to have_content('Title')
       expect(page).to have_content('The Godfather')

@@ -16,7 +16,7 @@ RSpec.describe 'New User Registration' do
     end
 
     describe 'happy path' do
-      it 'creates a new user and redirects to the show page for that user when the form is successfully submitted' do
+      it 'creates a new user and redirects to the dashboard for that user when the form is successfully submitted' do
         fill_in 'Name', with: 'John Doe'
         fill_in 'Email', with: @email
         fill_in 'Password', with: 'password'
@@ -24,7 +24,8 @@ RSpec.describe 'New User Registration' do
         click_button 'Register'
         
         new_user = User.find_by(name: 'John Doe')
-        expect(page).to have_current_path(user_path(new_user))
+        expect(page).to have_current_path(/dashboard)
+        expect(@current_user).to eq(new_user)
         expect(new_user.email).to eq(@email)
       end
     end
