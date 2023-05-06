@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   get '/register', to: 'users#new'
-  resources :users, only: %i[index new create] do
-    resources :discover, only: %i[index]
-    resources :movies, only: %i[index show] do
-      resources :parties, only: %i[new create]
-    end
+
+  resources :users, only: %i[index create] do
+  end
+
+  resources :discover, only: %i[index]
+
+  resources :movies, only: %i[index show] do
+    resources :parties, only: %i[new create]
   end
 
   get '/dashboard', to: 'users#dashboard'
