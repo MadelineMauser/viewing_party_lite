@@ -4,6 +4,7 @@ require 'faker'
 RSpec.describe 'TMDB Search' do
   before(:each) do
     @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'test', password_confirmation: 'test')
+    @current_user = @user
     visit user_discover_index_path(@user.id)
   end
 
