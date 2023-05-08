@@ -24,7 +24,7 @@ RSpec.describe 'New User Registration' do
         click_button 'Register'
         
         new_user = User.find_by(name: 'John Doe')
-        expect(page).to have_current_path(/dashboard)
+        expect(page).to have_current_path('/dashboard')
         expect(@current_user).to eq(new_user)
         expect(new_user.email).to eq(@email)
       end
@@ -79,3 +79,4 @@ RSpec.describe 'New User Registration' do
     end
   end
 end
+

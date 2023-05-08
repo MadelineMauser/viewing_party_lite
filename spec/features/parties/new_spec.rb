@@ -30,7 +30,7 @@ RSpec.describe 'New Viewing Party' do
         check "users_#{@user3.id}"
         click_button 'Create'
 
-        expect(page).to have_current_path(/dashboard)
+        expect(page).to have_current_path('/dashboard')
         within '#hosting' do
           expect(page).to have_content('Toy Story')
           expect(page).to have_content(@user2.name)
@@ -70,9 +70,9 @@ RSpec.describe 'New Viewing Party' do
         check "users_#{@user3.id}"
         click_button 'Create'
 
-        expect(page).to have_current_path(new_user_movie_party_path(@user1, 862))
+        expect(page).to have_current_path(new_movie_party_path(862))
 
-        visit user_path(@user1)
+        visit '/dashboard'
         within '#hosting' do
           expect(page).not_to have_content('Toy Story')
         end
