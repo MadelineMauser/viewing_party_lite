@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user = @current_user
+    @user = current_user
     @parties_invited_to = @user.parties_invited_to
     @parties_hosting = @user.parties_hosting
   end

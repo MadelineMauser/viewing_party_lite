@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'faker'
 
-RSpec.describe 'Users' do
+RSpec.describe 'Dashboard' do
   before(:each) do
     @user1 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
     @user2 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
@@ -30,8 +30,11 @@ RSpec.describe 'Users' do
     @party_user11 = PartyUser.create!(user_id: @user4.id, party_id: @party5.id, host: true)
     @party_user12 = PartyUser.create!(user_id: @user3.id, party_id: @party5.id, host: false)
    
-    @current_user = @user1
-
+    visit "/login"
+    fill_in "Email", with: @user1.email
+    fill_in "Password", with: @user1.password
+    click_button "Log In"
+    
     visit "/dashboard"
   end
   describe 'show' do
@@ -102,11 +105,12 @@ RSpec.describe 'Users' do
       end
       it 'redirects to the movie show page when the movie title is clicked', :vcr do
         click_link 'Up'
-        expect(page).to have_current_path("/dashboard/movies/14160")
+        expect(page).to have_current_path("/movies/14160")
       end
       it 'has the image of each movie', :vcr do
-        expect(page).to have_css('img[src*="vpbaStTMt8qqXaEgnOR2EE4DNJk.jpg"]')
-        expect(page).to have_css('img[src*="vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg"]')
+        save_and_open_page
+        expect(page).to have_css('img[src*="https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"]')
+        expect(page).to have_css('img[src*="https://image.tmdb.org/t/p/w500/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg"]')
       end
       it 'has the date and time of the event', :vcr do
         within "#party_#{@party1.id}" do

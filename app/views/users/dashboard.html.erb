@@ -5,7 +5,7 @@
 </div>
 <div class="row mb-3">
   <div class="col d-flex justify-content-center">
-    <%= link_to 'Discover Movies', user_discover_index_path(@user.id), class: 'btn btn-primary' %>
+    <%= link_to 'Discover Movies', '/discover', class: 'btn btn-primary' %>
   </div>
 </div>
 <hr>
@@ -17,7 +17,7 @@
       <div id="party_<%=party.id%>">
         <%party_movie = party.movie_details%>
         <img src="https://image.tmdb.org/t/p/w500<%=party_movie.poster_path%>" height="150px"><br>
-        <%=link_to party_movie.title, user_movie_path(@user, party_movie.id)%><br>
+        <%=link_to party_movie.title, movie_path(party_movie.id)%><br>
         Event Start Time: <%=party.date%> at <%=party.start_time%><br>
         Host: <%=party.host%><br>
         Invitees:
@@ -38,7 +38,7 @@
       <div id="party_<%=party.id%>">
         <%party_movie = party.movie_details%>
         <img src="https://image.tmdb.org/t/p/w500<%=party_movie.poster_path%>" height="150px"><br>
-        <%=link_to party_movie.title, user_movie_path(@user, party_movie.id)%><br>
+        <%=link_to party_movie.title, movie_path(party_movie.id)%><br>
         Event Start Time: <%=party.date%> at <%=party.start_time%><br>
         Host: <%=party.host%><br>
         Invitees:
