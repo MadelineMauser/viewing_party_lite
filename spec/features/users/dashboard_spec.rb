@@ -108,7 +108,6 @@ RSpec.describe 'Dashboard' do
         expect(page).to have_current_path("/movies/14160")
       end
       it 'has the image of each movie', :vcr do
-        save_and_open_page
         expect(page).to have_css('img[src*="https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"]')
         expect(page).to have_css('img[src*="https://image.tmdb.org/t/p/w500/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg"]')
       end
