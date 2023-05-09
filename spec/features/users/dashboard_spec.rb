@@ -30,12 +30,9 @@ RSpec.describe 'Dashboard' do
     @party_user11 = PartyUser.create!(user_id: @user4.id, party_id: @party5.id, host: true)
     @party_user12 = PartyUser.create!(user_id: @user3.id, party_id: @party5.id, host: false)
    
-    visit "/login"
-    fill_in "Email", with: @user1.email
-    fill_in "Password", with: @user1.password
-    click_button "Log In"
-    
-    visit "/dashboard"
+    log_in_user(@user1.id)
+
+    visit "/dashboard"  
   end
   describe 'show' do
     it 'has user name dashboard at the top', :vcr do

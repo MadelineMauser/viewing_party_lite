@@ -98,3 +98,7 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+require 'test_helpers/user_log_in_helper.rb'
+RSpec.configure do |config|
+  config.include UserLogInHelper
+end
