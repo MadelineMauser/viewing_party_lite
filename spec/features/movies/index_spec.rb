@@ -4,7 +4,7 @@ require 'faker'
 RSpec.describe 'Movies Index Page' do
   before(:each) do
     @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.free_email, password: 'test', password_confirmation: 'test')
-    @current_user = @user
+    log_in_user(@user1.id)
   end
 
   describe 'index' do
