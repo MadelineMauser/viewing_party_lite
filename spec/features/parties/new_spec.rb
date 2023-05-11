@@ -7,7 +7,7 @@ RSpec.describe 'New Viewing Party' do
     @user3 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
     @user4 = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'password321', password_confirmation: 'password321')
 
-    log_in_user(@user1.id)
+    log_in_user(@user1.id, @user1.password)
 
     visit '/movies/862/parties/new'
   end

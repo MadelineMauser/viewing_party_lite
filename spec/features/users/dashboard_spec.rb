@@ -30,7 +30,7 @@ RSpec.describe 'Dashboard' do
     @party_user11 = PartyUser.create!(user_id: @user4.id, party_id: @party5.id, host: true)
     @party_user12 = PartyUser.create!(user_id: @user3.id, party_id: @party5.id, host: false)
    
-    log_in_user(@user1.id)
+    log_in_user(@user1.id, @user1.password)
 
     visit "/dashboard"  
   end

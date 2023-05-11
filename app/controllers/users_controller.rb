@@ -26,7 +26,7 @@ class UsersController < ApplicationController
       redirect_to '/dashboard'
     else
       flash[:alert] = "Login failed. Please check that your credentials are correct."
-      redirect_to :back
+      redirect_to '/login'
     end
   end
 
