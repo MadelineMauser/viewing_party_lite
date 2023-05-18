@@ -1,6 +1,16 @@
 <div class="row mb-3">
   <div class="col d-flex justify-content-center">
-    <%= link_to 'Discover Movies', movies_path, class: 'btn btn-primary' %>
+    <%= link_to 'Discover Top Rated Movies', movies_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+<div class="row m-3">
+  <div class="col d-flex justify-content-center">
+    <%= form_with(url: movies_path, method: "get", local: true) do |f| %>
+    <div>
+      <%= f.text_field :search, placeholder: 'search' %>
+      <%= f.submit 'Find Movies' %>
+    </div>
+    <% end %>
   </div>
 </div>
 <hr>

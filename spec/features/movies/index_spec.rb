@@ -5,11 +5,11 @@ RSpec.describe 'Movies Index Page' do
   before(:each) do
     @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.free_email, password: 'test', password_confirmation: 'test')
     log_in_user(@user.id, @user.password)
+    visit "/movies"
   end
 
   describe 'index' do
     it 'has movie names that are links to movie show page', :vcr do
-      visit "/movies"
   
       expect(page).to have_link('The Godfather')
 
@@ -18,16 +18,14 @@ RSpec.describe 'Movies Index Page' do
     end
 
     describe 'search' do
-      it 'has a search bar that links to movies results page' do
-        VCR.use_cassette('up_movie_search') do
-          fill_in "search",	with: "Up"
-          click_button 'Find Movies'
-  
-          expect(page.status_code).to eq(200)
-        end
+      it 'has a search bar that links to movies results page', :vcr do
+        fill_in "search",	with: "Up"
+        click_button 'Find Movies'
+
+        expect(page.status_code).to eq(200)
       end
   
-      it 'will not search for movies without valid search term(s)' do
+      it 'will not search for movies without valid search term(s)', :vcr do
         fill_in "search",	with: ""
         click_button 'Find Movies'
   

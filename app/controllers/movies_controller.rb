@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
     if params[:search] == ""
-      redirect_to '/discover'
+      redirect_to '/movies'
     elsif params.include? 'search'
       @search_results = MovieSearch.new.search_movies(params[:search])
     else
@@ -10,7 +10,6 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @user = current_user
     @movie = MovieSearch.new.retrieve_movie(params[:id])
   end
 end

@@ -2,7 +2,7 @@ class PartiesController < ApplicationController
   def new
     movie_search = MovieSearch.new
     @movie = movie_search.retrieve_movie(params[:movie_id])
-    user = User.find(params[:user_id])
+    user = current_user
     @other_users = user.other_users
   end
 
