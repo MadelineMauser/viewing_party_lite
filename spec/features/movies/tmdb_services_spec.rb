@@ -5,7 +5,7 @@ RSpec.describe 'TMDB Search' do
   before(:each) do
     @user = User.create!(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: 'test', password_confirmation: 'test')
     log_in_user(@user.id, @user.password)
-    visit '/discover'
+    visit '/movies'
   end
 
   describe 'happy path' do
@@ -23,7 +23,6 @@ RSpec.describe 'TMDB Search' do
     end
 
     it 'can grab a specific movie', :vcr do
-      visit "/movies"
       click_link 'The Godfather'
       expect(page).to have_content('Title')
       expect(page).to have_content('The Godfather')
