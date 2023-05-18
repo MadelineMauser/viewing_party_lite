@@ -10,14 +10,29 @@ RSpec.describe 'Movies Index Page' do
   describe 'index' do
     it 'has movie names that are links to movie show page', :vcr do
       visit "/movies"
-      expect(page).to have_link('Discover Top Rated Movies')
-
-      click_link('Discover Top Rated Movies')
-      expect(current_path).to eq("/movies")
+  
       expect(page).to have_link('The Godfather')
 
       click_link 'The Godfather'
       expect(current_path).to eq(movie_path(238))
+    end
+
+    describe 'search' do
+      it 'has a search bar that links to movies results page' do
+        VCR.use_cassette('up_movie_search') do
+          fill_in "search",	with: "Up"
+          click_button 'Find Movies'
+  
+          expect(page.status_code).to eq(200)
+        end
+      end
+  
+      it 'will not search for movies without valid search term(s)' do
+        fill_in "search",	with: ""
+        click_button 'Find Movies'
+  
+        expect(current_path).to eq("/movies")
+      end
     end
   end
 end
