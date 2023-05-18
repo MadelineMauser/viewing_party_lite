@@ -1,6 +1,6 @@
 <div class="row mb-3">
   <div class="col d-flex justify-content-center">
-    <%= link_to 'Discover Movies', user_discover_index_path(params[:user_id]), class: 'btn btn-primary' %>
+    <%= link_to 'Discover Movies', movies_path, class: 'btn btn-primary' %>
   </div>
 </div>
 <hr>
@@ -13,7 +13,7 @@
       </tr>
       <% @search_results.each do |movie| %>
       <tr>
-        <td><%= link_to movie.title, user_movie_path(params[:user_id], movie.id) %></td>
+        <td><%= link_to movie.title, movie_path(movie.id) %></td>
         <td>Vote average: <%= movie.vote_average %></td>
       </tr>
       <% end %>
