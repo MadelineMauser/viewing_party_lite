@@ -47,15 +47,15 @@ RSpec.describe 'New Viewing Party' do
         check "users_#{@user3.id}"
         click_button 'Create'
 
-        visit user_path(@user2)
+        log_in_user(@user2.id, @user2.password)
         within '#invited_to' do
           expect(page).to have_content('Toy Story')
         end
-        visit user_path(@user3)
+        log_in_user(@user3.id, @user3.password)
         within '#invited_to' do
           expect(page).to have_content('Toy Story')
         end
-        visit user_path(@user4)
+        log_in_user(@user4.id, @user4.password)
         within '#invited_to' do
           expect(page).not_to have_content('Toy Story')
         end

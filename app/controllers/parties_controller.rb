@@ -7,7 +7,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party_host = User.find(params[:user_id])
+    @party_host = current_user
     @movie = MovieSearch.new.retrieve_movie(params[:movie_id])
     @new_party = Party.new(party_params)
     @new_party[:movie_title] = @movie.title
@@ -17,9 +17,10 @@ class PartiesController < ApplicationController
       params[:users].each do |id|
         PartyUser.create(party_id: @new_party.id, user_id: id.to_i, host: false)
       end
-      redirect_to controller: :users, action: :show
+      redirect_to controller: :users, action: :dashboard
     else
-      redirect_to :back
+      flash[:alert] = "Party creation failed."
+      redirect_to "/movies/#{params[:movie_id]}/parties/new"
     end
   end
 

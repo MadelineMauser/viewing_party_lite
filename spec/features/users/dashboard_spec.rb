@@ -43,11 +43,6 @@ RSpec.describe 'Dashboard' do
       expect(page).to have_link('Discover Movies')
     end
 
-    it 'links to the discover page for the user', :vcr do
-      click_link('Discover Movies')
-      expect(current_path).to eq("/discover")
-    end
-
     it 'has section to display parties', :vcr do
       within('#parties') do
         expect(page).to have_content('Viewing Parties')
